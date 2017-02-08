@@ -1764,6 +1764,10 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// This doesn't make any problem
+console.log(_react2.default);
+// This one does :C
+
 /***/ }),
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {

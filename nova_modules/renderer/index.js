@@ -2,3 +2,5 @@
 import copy from 'shallow-copy';
 // This one does :C
 import React from 'react';
+
+console.log(React);
