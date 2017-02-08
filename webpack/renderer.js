@@ -35,7 +35,7 @@ module.exports = {
             path.resolve(__dirname, '..', 'node_modules')
         ],
         // Description files tells wich files are descriptors of our compilation
-        descriptionFiles: [path.resolve(__dirname, '..', 'package.json')],
+        //FIXED, removed the description file: descriptionFiles: [path.resolve(__dirname, '..', 'package.json')],
         // This are the extensions loaded automatically on require(filename) without extensions
         extensions: [
           '.jsx', '.js', 
@@ -58,7 +58,7 @@ module.exports = {
                 options: {
                     // OLD WAY: presets: ['latest']
 					// NEW WAY: disables babel transpiling ES2015 Modules => CJS
-					presets: [ ['latest', { modules: false }] ] 
+					presets: [ ['latest'] ] 
                 }
             },
             // Extended JavaScript files uses React
@@ -70,7 +70,7 @@ module.exports = {
                 options: {
                     // OLD WAY: presets: ['latest', 'react']
 					// NEW WAY: disables babel transpiling ES2015 Modules => CJS
-					presets: [ ['latest', { modules: false }], 'react' ] 
+					presets: [ ['latest'], 'react' ] 
                 }  
             },
             // JSON is also loaded with it's own loader:
