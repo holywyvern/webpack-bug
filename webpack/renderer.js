@@ -24,7 +24,7 @@ module.exports = {
         filename:  'bundle.js'
     },
     // The target is electron-renderer when building for renderer
-    target: 'electron',
+    target: 'electron-renderer',
     resolve: {
         // Alias packages
         alias: {
