@@ -1,0 +1,33 @@
+{
+  "name": "webpack-bug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holywyvern/webpack-bug.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/holywyvern/webpack-bug/issues"
+  },
+  "homepage": "https://github.com/holywyvern/webpack-bug#readme",
+  "dependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "electron": "^1.4.15",
+    "extend": "^3.0.0",
+    "json-loader": "^0.5.4",
+    "react": "^15.4.2",
+    "redux": "^3.6.0",
+    "shallow-copy": "0.0.1",
+    "webpack": "^2.2.1"
+  }
+}
