@@ -12,7 +12,9 @@ const path              = require('path');
 
 module.exports = {
     // The entry for the render file
-    entry: path.resolve(__dirname, '..', 'src', 'renderer', 'main.js'),
+    // OLD WAY: entry: path.resolve(__dirname, '..', 'src', 'renderer', 'main.js'),
+	// NEW WAY: a relative path to the context:
+	entry:  './src/renderer/main.js', 
     // The root of our application
     context: path.resolve(__dirname, '..'),
     // The output file
@@ -37,9 +39,7 @@ module.exports = {
         // This are the extensions loaded automatically on require(filename) without extensions
         extensions: [
           '.jsx', '.js', 
-          '.html',
-          '.css', '.scss',
-          '.json', '.yml'
+          '.json'
         ],        
     },
     module: {
@@ -56,7 +56,9 @@ module.exports = {
                 loader: 'babel-loader',
                 // The babel options are here
                 options: {
-                    presets: ['latest']
+                    // OLD WAY: presets: ['latest']
+					// NEW WAY: disables babel transpiling ES2015 Modules => CJS
+					presets: [ ['latest', { modules: false }] ] 
                 }
             },
             // Extended JavaScript files uses React
@@ -66,7 +68,9 @@ module.exports = {
                 loader: 'babel-loader',
                 // The babel options are here, we added react preset to JSX files.
                 options: {
-                    presets: ['latest', 'react']
+                    // OLD WAY: presets: ['latest', 'react']
+					// NEW WAY: disables babel transpiling ES2015 Modules => CJS
+					presets: [ ['latest', 'react', { modules: false }] ] 
                 }  
             },
             // JSON is also loaded with it's own loader:
