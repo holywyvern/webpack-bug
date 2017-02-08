@@ -70,7 +70,7 @@ module.exports = {
                 options: {
                     // OLD WAY: presets: ['latest', 'react']
 					// NEW WAY: disables babel transpiling ES2015 Modules => CJS
-					presets: [ ['latest', 'react', { modules: false }] ] 
+					presets: [ ['latest', { modules: false }], 'react' ] 
                 }  
             },
             // JSON is also loaded with it's own loader:
